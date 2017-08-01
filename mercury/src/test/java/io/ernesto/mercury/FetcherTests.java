@@ -7,12 +7,12 @@ import java.util.concurrent.*;
 import static org.junit.Assert.assertTrue;
 
 public class FetcherTests {
-
     private long maxTimeout = 10000;
+    private String baseUrl = "https://hacker-news.firebaseio.com/v0/";
 
     @Test
     public void testFetchingIDList() {
-        Fetcher fetcher = new Fetcher("https://hacker-news.firebaseio.com/v0/");
+        Fetcher fetcher = new Fetcher(baseUrl);
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
@@ -40,7 +40,7 @@ public class FetcherTests {
 
     @Test
     public void testFetchItem() {
-        Fetcher fetcher = new Fetcher("https://hacker-news.firebaseio.com/v0/");
+        Fetcher fetcher = new Fetcher(baseUrl);
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
 

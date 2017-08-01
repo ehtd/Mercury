@@ -2,6 +2,7 @@ package io.ernesto.mercury;
 
 import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Fetcher {
@@ -32,10 +33,25 @@ public class Fetcher {
             }
 
             return buffer.toString();
-
         }
-        catch (IOException ioe) {
-            ioe.printStackTrace();
+        catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
         return null;
