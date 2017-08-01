@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mercury.iml" filepath="$PROJECT_DIR$/.idea/modules/mercury.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mercury_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mercury_main.iml" group="mercury" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mercury_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mercury_test.iml" group="mercury" />
+    </modules>
+  </component>
+</project>
