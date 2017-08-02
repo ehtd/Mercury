@@ -1,12 +1,13 @@
 package io.ernesto.mercury;
 
+import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Fetcher {
-
+    private static final Class<?> unused0 = HttpsURLConnection.class;
     private String baseURL;
 
     public Fetcher(String baseURL) {
